@@ -90,14 +90,15 @@ public class MainActivity extends AppCompatActivity {
         ll_hasil_praktikum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Klik Hasil Praktikum", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Hasil Praktikum belum tersedia", Toast.LENGTH_SHORT).show();
             }
         });
 
         ll_evaluasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(mContext, EvaluasiActivity.class));
+//                startActivity(new Intent(mContext, EvaluasiActivity.class));
+                Toast.makeText(getApplicationContext(), "Evaluasi belum tersedia", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -123,7 +124,9 @@ public class MainActivity extends AppCompatActivity {
         ll_profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Klik Profil", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Profil Belum Tersedia", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(getApplicationContext(), ProfilActivity.class);
+//                startActivity(intent);
             }
         });
 
@@ -134,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
-                Toast.makeText(getApplicationContext(), "Klik Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Anda Berhasil Keluar", Toast.LENGTH_SHORT).show();
             }
         });
 

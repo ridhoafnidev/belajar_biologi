@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TA Pembelajaran Biologi</string>
+    <string name="app_name">Panduan Praktikum Struktur dan Fungsi Tumbuhan</string>
     <string name="version_unknown">Unknown</string>
     <string name="app_version">Version</string>
     <string name="default_notification_channel_id">Default</string>

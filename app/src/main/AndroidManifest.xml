@@ -6,27 +6,30 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.RegistrasiActivity" />
-        <activity android:name=".activity.EvaluasiActivity"/>
-        <activity android:name=".activity.ProsedurPraktikumActivity"/>
-        <activity android:name=".activity.TujuanPraktikumActivity" />
-        <activity android:name=".activity.IndikatorActivity" />
-        <activity android:name=".activity.KompetensiDasarActivity" />
-        <activity android:name=".activity.KompetensiIntiActivity" />
-        <activity android:name=".activity.AlatBahanActivity" />
-        <activity android:name=".activity.LoginActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.ProfilActivity"></activity>
+        <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.RegistrasiActivity" />
+        <activity android:name=".activity.EvaluasiActivity" />
+        <activity android:name=".activity.ProsedurPraktikumActivity" />
+        <activity android:name=".activity.TujuanPraktikumActivity" />
+        <activity android:name=".activity.IndikatorActivity" />
+        <activity android:name=".activity.KompetensiDasarActivity" />
+        <activity android:name=".activity.KompetensiIntiActivity" />
+        <activity android:name=".activity.AlatBahanActivity" />
+        <activity android:name=".activity.LoginActivity" />
     </application>
 
 </manifest>
