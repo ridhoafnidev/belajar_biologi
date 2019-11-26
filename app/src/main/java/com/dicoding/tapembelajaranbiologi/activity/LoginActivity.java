@@ -94,16 +94,22 @@ public class LoginActivity extends AppCompatActivity {
                                 if (jsonRESULTS.getString("error").equals("false")){
                                     // Jika login berhasil maka data nama yang ada di response API
                                     // akan diparsing ke activity selanjutnya.
-                                    Toast.makeText(mContext, "BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
+
+                                    String nama = jsonRESULTS.getJSONObject("murid").getString("nama");
+                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, nama);
+
+                                    String username = jsonRESULTS.getJSONObject("murid").getString("username");
+                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_USERNAME, username);
+
+                                    System.out.println("nilai id "+ username);
+                                    // Shared Pref ini berfungsi untuk menjadi trigger session login
+                                    sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
+
+                                    Toast.makeText(mContext, "Anda Berhasil Masuk", Toast.LENGTH_SHORT).show();
 
                                     startActivity(new Intent(mContext, MainActivity.class)
                                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                     finish();
-
-                                    String nama = jsonRESULTS.getJSONObject("user").getString("nama");
-                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, nama);
-                                    // Shared Pref ini berfungsi untuk menjadi trigger session login
-                                    sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
 
                                 } else {
                                     // Jika login gagal

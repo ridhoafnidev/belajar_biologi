@@ -20,7 +20,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo_small"
+            android:src="@drawable/ic_logo"
             android:tint="@color/green_300" />
 
         <View
@@ -32,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:text="Aplikasi Praktikum Biologi"
+            android:gravity="center"
+            android:text="Panduan Praktikum \n Biologi"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textColor="@color/green_300"
             android:textStyle="bold" />
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:text="Sign in untuk lanjut"
+            android:text="Masuk untuk lanjut"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
             android:textColor="@color/blue_grey_300" />
 
@@ -54,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="USERNAME"
+            android:text="Username"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
             android:textColor="@color/blue_grey_200" />
@@ -79,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PASSWORD"
+            android:text="Password"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
             android:textColor="@color/blue_grey_200" />
@@ -109,7 +110,7 @@
             android:layout_marginLeft="-4dp"
             android:layout_marginRight="-4dp"
             android:background="@drawable/btn_rounded_green_300"
-            android:text="S I G N  I N"
+            android:text="MASUK"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
@@ -130,9 +131,9 @@
                 android:id="@+id/et_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DAFTAR AKUN?"
+                android:text="Belum punya akun?Daftar disini"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                android:textColor="@color/blue_grey_400" />
+                android:textColor="@color/blue_400" />
 
 
         </LinearLayout>

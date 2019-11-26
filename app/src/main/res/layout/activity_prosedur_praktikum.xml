@@ -51,15 +51,120 @@
                 android:background="#ececec"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. Buatlah preparat dari irisan melintang dari daun, akar dan batang yang sudah disediakan menggunakan silet \n \n 2. Letakkan irisan melitang pada kaca preparat kemudian tetes sedit aquades menggunakan pipet tetes \n \n 3. Tutuplah dengan kaca penutup secara perlahan agar tidak terbentuk gelembung air \n \n 4.	Amatilah preparat yang telah kamu buat menggunakan mikroskop dari pembesaran 10x10 kemudian pembesaran 10x40 \n \n 5. Fotolah hasil pengamatan mu pada menu hasil praktikum, dan tulislah hasil pengamatan mu selama melakukan praktikum struktur dan fungsi tumbuhan"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:layout_marginRight="@dimen/activity_vertical_margin"
-                android:textSize="17sp"
-                android:textAlignment="center"
-                />
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_one"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Buatlah preparat dari irisan melintang dari daun, akar dan batang yang sudah disediakan menggunakan silet"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_two"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Letakkan irisan melintang pada kaca preparat kemudian tetes sedit aquades menggunakan pipet tetes"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_three"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tutuplah dengan kaca penutup secara perlahan agar tidak terbentuk gelembung air"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_four"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amatilah preparat yang telah kamu buat menggunakan mikroskop dari pembesaran 10x10 kemudian pembesaran 10x40"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_five"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fotolah hasil pengamatan mu pada menu hasil praktikum, dan tulislah hasil pengamatan mu selama melakukan praktikum struktur dan fungsi tumbuhan"/>
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

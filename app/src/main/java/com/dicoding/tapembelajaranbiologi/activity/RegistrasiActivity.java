@@ -77,7 +77,6 @@ public class RegistrasiActivity extends AppCompatActivity {
         (findViewById(R.id.fab_register)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
                 requestRegister();
             }
         });
@@ -85,43 +84,75 @@ public class RegistrasiActivity extends AppCompatActivity {
     }
 
     private void requestRegister(){
-        mApiService.registerRequest(etNamaLengkap.getText().toString(),
-                etUsername.getText().toString(),
-                etPassword.getText().toString(),
-                etKelas.getText().toString(),
-                etMataPelajaran.getText().toString())
-                .enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.isSuccessful()){
-                            Log.i("debug", "onResponse: BERHASIL");
-                            loading.dismiss();
-                            try {
-                                JSONObject jsonRESULTS = new JSONObject(response.body().string());
-                                if (jsonRESULTS.getString("error").equals("false")){
-                                    Toast.makeText(mContext, "BERHASIL REGISTRASI", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(mContext, LoginActivity.class));
-                                } else {
-                                    String error_message = jsonRESULTS.getString("error_msg");
-                                    Toast.makeText(mContext, error_message, Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        } else {
-                            Log.i("debug", "onResponse: GA BERHASIL");
-                            loading.dismiss();
-                        }
-                    }
+        boolean isEmpty = false;
 
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.e("debug", "onFailure: ERROR > " + t.getMessage());
-                        Toast.makeText(mContext, "Koneksi Internet Bermasalah", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        if (etNamaLengkap.getText().toString().equalsIgnoreCase("")){
+            isEmpty = true;
+            Toast.makeText(getApplicationContext(), "Nama Lengkap Masih Kosong", Toast.LENGTH_SHORT).show();
+        }
+
+        if (etUsername.getText().toString().equalsIgnoreCase("")){
+            isEmpty = true;
+            Toast.makeText(getApplicationContext(), "Username Masih Kosong", Toast.LENGTH_SHORT).show();
+        }
+
+        if (etPassword.getText().toString().equalsIgnoreCase("")){
+            isEmpty = true;
+            Toast.makeText(getApplicationContext(), "Password Masih Kosong", Toast.LENGTH_SHORT).show();
+        }
+
+        if (etKelas.getText().toString().equalsIgnoreCase("")){
+            isEmpty = true;
+            Toast.makeText(getApplicationContext(), "Kelas Masih Kosong", Toast.LENGTH_SHORT).show();
+        }
+
+        if (etMataPelajaran.getText().toString().equalsIgnoreCase("")){
+            isEmpty = true;
+            Toast.makeText(getApplicationContext(), "Mata Pelajaran Masih Kosong", Toast.LENGTH_SHORT).show();
+        }
+
+        if (isEmpty == false){
+            loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
+
+            mApiService.registerRequest(etNamaLengkap.getText().toString(),
+                    etUsername.getText().toString(),
+                    etPassword.getText().toString(),
+                    etKelas.getText().toString(),
+                    etMataPelajaran.getText().toString())
+                    .enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            if (response.isSuccessful()){
+                                Log.i("debug", "onResponse: Berhasil");
+                                loading.dismiss();
+                                try {
+                                    JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                                    if (jsonRESULTS.getString("error").equals("false")){
+                                        Toast.makeText(mContext, "Registrasi Berhasil", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(mContext, LoginActivity.class));
+                                    } else {
+                                        String error_message = jsonRESULTS.getString("error_msg");
+                                        Toast.makeText(mContext, error_message, Toast.LENGTH_SHORT).show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            } else {
+                                Log.i("debug", "onResponse: Gagal");
+                                loading.dismiss();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Log.e("debug", "onFailure: ERROR > " + t.getMessage());
+                            Toast.makeText(mContext, "Koneksi Internet Bermasalah", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
+
     }
 
     private void showAgeDialog(final View v) {

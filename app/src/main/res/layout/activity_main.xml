@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Panduan Praktikum \n Struktur dan Fungsi Tumbuhan"
+                android:text="Panduan Praktikum \n Biologi"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="18sp"
