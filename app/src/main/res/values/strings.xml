@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TA Pembelajaran Biologi</string>
+    <string name="version_unknown">Unknown</string>
+    <string name="app_version">Version</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="webview_loading">Load Content... </string>
 </resources>
