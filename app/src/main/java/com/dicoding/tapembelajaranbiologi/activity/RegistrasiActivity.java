@@ -1,8 +1,10 @@
-package com.dicoding.tapembelajaranbiologi;
+package com.dicoding.tapembelajaranbiologi.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.dicoding.tapembelajaranbiologi.R;
 
 public class RegistrasiActivity extends AppCompatActivity {
 
