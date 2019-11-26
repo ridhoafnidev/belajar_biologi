@@ -140,7 +140,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Anda Berhasil Keluar", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 }
