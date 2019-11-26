@@ -137,7 +137,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Klik Logout", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 }
