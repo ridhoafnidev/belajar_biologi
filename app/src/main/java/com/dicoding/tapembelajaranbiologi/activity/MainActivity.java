@@ -14,15 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dicoding.tapembelajaranbiologi.R;
+import com.dicoding.tapembelajaranbiologi.utils.SharedPrefManager;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout ll_kompetensi_inti, ll_kompetensi_dasar, ll_indikator, ll_tujuan_praktikum, ll_alat_bahan, ll_prosedur_praktikum;
     LinearLayout ll_hasil_praktikum, ll_evaluasi, ll_info_aplikasi, ll_profil, ll_logout;
     Context mContext;
+    SharedPrefManager sharedPrefManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPrefManager = new SharedPrefManager(this);
         mContext = this;
         ll_kompetensi_inti = findViewById(R.id.ll_kompetensi_inti);
         ll_kompetensi_dasar = findViewById(R.id.ll_kompetensi_dasar);
@@ -127,6 +130,10 @@ public class MainActivity extends AppCompatActivity {
         ll_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, false);
+                startActivity(new Intent(MainActivity.this, LoginActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                finish();
                 Toast.makeText(getApplicationContext(), "Klik Logout", Toast.LENGTH_SHORT).show();
             }
         });
