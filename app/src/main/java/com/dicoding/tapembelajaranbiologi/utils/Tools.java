@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Utils;
+package com.dicoding.tapembelajaranbiologi.utils;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -22,7 +22,6 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.URLUtil;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -38,7 +37,7 @@ import androidx.core.widget.NestedScrollView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
-import com.dicoding.tapembelajaranbiologi.Models.DeviceInfo;
+import com.dicoding.tapembelajaranbiologi.models.DeviceInfo;
 import com.dicoding.tapembelajaranbiologi.R;
 import com.google.android.gms.maps.GoogleMap;
 

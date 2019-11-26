@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi;
+package com.dicoding.tapembelajaranbiologi.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,21 +10,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.dicoding.tapembelajaranbiologi.Utils.Api.BaseApiService;
-import com.dicoding.tapembelajaranbiologi.Utils.Api.UtilsApi;
-import com.dicoding.tapembelajaranbiologi.Utils.Tools;
-
+import com.dicoding.tapembelajaranbiologi.utils.Api.BaseApiService;
+import com.dicoding.tapembelajaranbiologi.utils.Api.UtilsApi;
+import com.dicoding.tapembelajaranbiologi.utils.Tools;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
+import com.dicoding.tapembelajaranbiologi.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

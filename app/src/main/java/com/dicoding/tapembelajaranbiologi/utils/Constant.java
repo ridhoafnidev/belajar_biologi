@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Utils;
+package com.dicoding.tapembelajaranbiologi.utils;
 
 public class Constant {
     public static final String KEY_ID_MATKUL = "keyIdMatkul";

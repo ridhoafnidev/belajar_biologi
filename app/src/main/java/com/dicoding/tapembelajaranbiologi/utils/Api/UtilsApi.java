@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Utils.Api;
+package com.dicoding.tapembelajaranbiologi.utils.Api;
 
 public class UtilsApi {
 

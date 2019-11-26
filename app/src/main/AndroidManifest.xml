@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dicoding.tapembelajaranbiologi">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".Activity.SoalPraktikumActivity">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.RegistrasiActivity" />
+        <activity android:name=".activity.EvaluasiActivity"/>
+        <activity android:name=".activity.ProsedurPraktikumActivity"/>
+        <activity android:name=".activity.TujuanPraktikumActivity" />
+        <activity android:name=".activity.IndikatorActivity" />
+        <activity android:name=".activity.KompetensiDasarActivity" />
+        <activity android:name=".activity.KompetensiIntiActivity" />
+        <activity android:name=".activity.AlatBahanActivity" />
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

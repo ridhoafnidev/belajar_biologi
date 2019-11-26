@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Utils.Api;
+package com.dicoding.tapembelajaranbiologi.utils.Api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

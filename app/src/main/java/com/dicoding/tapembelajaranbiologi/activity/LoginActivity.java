@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi;
+package com.dicoding.tapembelajaranbiologi.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,9 +14,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dicoding.tapembelajaranbiologi.R;
-import com.dicoding.tapembelajaranbiologi.Utils.Api.BaseApiService;
-import com.dicoding.tapembelajaranbiologi.Utils.Api.UtilsApi;
-import com.dicoding.tapembelajaranbiologi.Utils.SharedPrefManager;
+import com.dicoding.tapembelajaranbiologi.utils.Api.BaseApiService;
+import com.dicoding.tapembelajaranbiologi.utils.Api.UtilsApi;
+import com.dicoding.tapembelajaranbiologi.utils.SharedPrefManager;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;

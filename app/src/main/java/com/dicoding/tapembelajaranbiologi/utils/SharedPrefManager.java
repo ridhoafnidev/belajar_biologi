@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Utils;
+package com.dicoding.tapembelajaranbiologi.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

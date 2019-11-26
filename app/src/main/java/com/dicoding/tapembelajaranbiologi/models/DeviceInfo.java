@@ -1,4 +1,4 @@
-package com.dicoding.tapembelajaranbiologi.Models;
+package com.dicoding.tapembelajaranbiologi.models;
 
 import java.io.Serializable;
 
